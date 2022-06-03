@@ -46,6 +46,27 @@ int fatorial(int n) {
    return (fat) ;
 }
 
+//calculateLeapYear
+
+void verifyLeapYear() {
+  int initialYear, finalYear;
+
+  printf("Ano inicial: ");
+  scanf("%d", &initialYear);
+
+  int interval = initialYear;
+  
+  printf("Ano final: ");
+  scanf("%d", &finalYear);
+
+  for (int counter=1; initialYear <= finalYear; counter++) {
+    initialYear = interval + counter;
+    if (initialYear % 4 == 0 && initialYear % 100 != 0 || initialYear % 400 == 0)
+      printf("ano %d\n", initialYear);
+  }
+}
+
+
 int main() {
   // MMC
   int num1;
@@ -162,7 +183,7 @@ int main() {
      }
 
   //calculateLeapYear
-  //só falta essa
+  verifyLeapYear();
 
   //calculateAreaOfTriangle
   int base;
